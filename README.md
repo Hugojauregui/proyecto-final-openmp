@@ -17,7 +17,7 @@ Este proyecto implementa una solución de **procesamiento paralelo** utilizando 
 ✅ Analizar schedulers OpenMP  
 ✅ Reducir false sharing  
 ✅ Forzar vectorización SIMD  
-✅ Implementar afinidad de hilos (10 pts extra)
+✅ Implementar afinidad de hilos
 
 ---
 
