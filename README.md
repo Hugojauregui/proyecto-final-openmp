@@ -1,67 +1,58 @@
-# Proyecto Final - Programación Paralela y Concurrente
+# 🚀 Proyecto Final - Programación Paralela y Concurrente (OpenMP)
 
-Proyecto en C++ con OpenMP que cumple:
+![OpenMP](https://img.shields.io/badge/OpenMP-Parallel%20Programming-blue?style=for-the-badge)
+![C++](https://img.shields.io/badge/C%2B%2B-17-orange?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Ubuntu-Linux-E95420?style=for-the-badge&logo=ubuntu)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-- Código secuencial base.
-- Línea base paralela generada por IA con OpenMP.
-- Optimización manual de OpenMP.
-- Comparación de schedulers `static`, `dynamic` y `guided` con `chunk size`.
-- Histograma con `atomic` vs variables locales alineadas para evitar false sharing.
-- Filtro de convolución con estructura SPMD usando `#pragma omp simd`.
-- Extra: medición con `OMP_PROC_BIND` y `OMP_PLACES`.
+---
 
-## 1. Preparar Ubuntu
+# 📌 Descripción
 
-```bash
-sudo apt update
-sudo apt install -y build-essential g++ make git python3 python3-pip linux-tools-common linux-tools-generic
-pip3 install pandas matplotlib
-```
+Este proyecto implementa una solución de **procesamiento paralelo** utilizando **OpenMP en C++** para:
 
-Si `pip3 install` falla por permisos:
+✅ Generar fractales Mandelbrot en resolución ultra alta (8K)  
+✅ Aplicar filtros de convolución 2D pesados  
+✅ Evaluar rendimiento multinúcleo  
+✅ Analizar schedulers OpenMP  
+✅ Reducir false sharing  
+✅ Forzar vectorización SIMD  
+✅ Implementar afinidad de hilos (10 pts extra)
 
-```bash
-sudo apt install -y python3-pandas python3-matplotlib
-```
+---
 
-## 2. Compilar
+# 🧠 Tecnologías Utilizadas
 
-```bash
-make clean
-make all
-```
+- ⚙️ C++
+- 🧵 OpenMP
+- 🐧 Ubuntu Linux
+- 📊 Python
+- 🌳 Git / GitHub
+- ⚡ GCC
 
+---
 
-
-## 3. Ejecutar prueba formal
-
-Para 4K:
+# 📂 Estructura del Proyecto
 
 ```bash
-W=3840 H=2160 ITER=1000 RADIUS=15 ./scripts/run_benchmarks.sh
-python3 scripts/plot_results.py
-```
+src/
+├── sequential.cpp
+├── ai_parallel.cpp
+└── optimized_openmp.cpp
 
-Para 8K real:
+scripts/
+├── benchmark.sh
+├── scheduler_test.sh
+└── affinity_test.sh
 
-```bash
-W=7680 H=4320 ITER=1000 RADIUS=15 ./scripts/run_benchmarks.sh
-python3 scripts/plot_results.py
-```
+results/
+├── *.csv
+├── *.png
+└── hardware_info.txt
 
-## 4. Recolectar hardware
+docs/
+├── Reporte_Final_OpenMP_Completo.pdf
+└── Reporte_Final_OpenMP_Completo.docx
 
-```bash
-./scripts/collect_hardware.sh
-```
-
-
-## 5. Verificar vectorización
-
-Al compilar `optimized_openmp.cpp`, el Makefile genera:
-
-```bash
-results/vectorization_report.txt
-results/vectorization_missed.txt
-```
-
+images/
+└── optimized_final.ppm
