@@ -1,0 +1,21 @@
+version,threads,scheduler,chunk,width,height,taskA,taskB,hist_atomic,hist_local,total,affinity
+sequential,1,none,0,7680,4320,34.5536,7.53779,,,42.0914,none
+ai_parallel,1,static,default,7680,4320,28.756,5.26943,,,34.0254,none
+optimized,1,static,32,7680,4320,27.6929,5.2359,0.219169,0.0759892,33.0048,none
+ai_parallel,2,static,default,7680,4320,12.659,3.71153,,,16.3705,none
+optimized,2,static,32,7680,4320,14.1009,2.75554,0.422021,0.0318822,16.8884,none
+ai_parallel,3,static,default,7680,4320,19.1847,1.84398,,,21.0287,none
+optimized,3,static,32,7680,4320,12.2097,2.37612,0.478524,0.0235997,14.6095,none
+ai_parallel,4,static,default,7680,4320,15.0804,1.52066,,,16.6011,none
+optimized,4,static,32,7680,4320,7.40076,1.64361,0.369729,0.0266478,9.07102,none
+ai_parallel,5,static,default,7680,4320,12.8466,2.18826,,,15.0348,none
+optimized,5,static,32,7680,4320,7.85679,2.05721,0.336632,0.0315816,9.94558,none
+ai_parallel,6,static,default,7680,4320,9.80431,1.85785,,,11.6622,none
+optimized,6,static,32,7680,4320,8.44402,2.91513,0.353036,0.0447857,11.4039,none
+ai_parallel,7,static,default,7680,4320,9.64921,1.84896,,,11.4982,none
+optimized,7,static,32,7680,4320,7.60564,1.89665,0.377883,0.0337188,9.53601,none
+ai_parallel,8,static,default,7680,4320,9.10971,1.88203,,,10.9917,none
+optimized,8,static,32,7680,4320,8.16667,1.70763,0.339891,0.02849,9.90279,none
+optimized,4,guided,32,7680,4320,9.93867,1.78288,0.418894,0.0317302,11.7533,PROC_BIND='false' PLACES=cores
+optimized,4,guided,32,7680,4320,10.5638,1.91144,0.378283,0.0261894,12.5014,PROC_BIND='close' PLACES=cores
+optimized,4,guided,32,7680,4320,12.574,1.69468,0.521681,0.0192649,14.2879,PROC_BIND='spread' PLACES=cores
